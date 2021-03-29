@@ -1,0 +1,273 @@
+/* Nuestros custom properties */
+:root {
+    --blanco: #FFFFFF;
+    --oscuro: #212121;
+    --gris: #757575;
+    --primario: rgb(64, 173, 251);
+    --secuntario: rgb(130, 182, 254);
+}
+
+/* Seleccionamos todo el HTML para resetear su tamaño */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3, h4 {
+    font-size: 2.2rem;
+}
+
+h2, h3, h4 {
+    text-align: center;
+}
+
+h3 {
+    text-transform: uppercase;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* Tamaño de letra de todo el HTML y el tipo de letra */
+body {
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilos de la nav bar */
+.header {
+    background-color: var(--primario);
+    color: var(--blanco);
+    text-transform: uppercase;
+    padding-bottom: 0;
+}
+
+.contenido-header {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .contenido-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navegacion-principal {
+        display: flex;
+        flex-direction: row;
+        text-align: center;    
+    }
+}
+
+.navegacion-principal a {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+.navegacion-principal a:hover {
+    color: var(--oscuro);
+}
+
+/* Estilos del banner principal */
+.contenido-principal {
+    margin-top: 0%;
+    background-image: url(/img/03.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60rem;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.principal {
+    position: absolute;
+    background-color: rgba( 0,0,0,.7 );
+    width: 100%;
+    height: 100%;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.principal, h2 {
+    text-transform: uppercase;
+    color: var(--blanco);
+}
+
+h2 {
+    font-size: 5rem;
+}
+
+/* Estilos del about us */
+.sobre-nosotros {
+    background-color: rgb(206, 249, 255);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.us{
+    background-color: rgb(206, 249, 255);
+    padding-top: 1rem;
+}
+
+.imagen > img {
+    width: 50rem;
+    height: 38rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.contenido-sobre-nosotros > p {
+    color: var(--oscuro);
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+@media (min-width: 768px) {
+    .sobre-nosotros {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        column-gap: 2rem;
+        text-align: justify;
+    }
+    
+    .imagen > img {
+        width: 50rem;
+        height: 38rem;
+    }
+}
+
+/* Estilos de Nuestras Clases y Precios */
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        column-gap: 2rem;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.servicio h4 {
+    color: var(--gris);
+    text-transform: uppercase;
+}
+
+.servicio p {
+    font-size: 1.4rem;
+}
+
+.servicio .icono-servicio > img {
+    background-color: var(--secuntario);
+    border-radius: 50%;
+    height: 15rem;
+    width: 15rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Estilos de profesores */
+.profesor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
+    background-color: rgb(206, 249, 255);
+}
+
+.profes {
+    background-color: rgb(206, 249, 255);
+    padding-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .profesores {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2rem;
+        align-items: center;
+        text-align: center;
+        background-color: rgb(206, 249, 255);
+    }
+
+    .profes {
+        background-color: rgb(206, 249, 255);
+        padding-top: 1rem;
+    }
+}
+
+.profesor h4 {
+    text-transform: uppercase;
+    color: var(--gris);
+}
+
+.icono-profesor > svg{
+    height: 10rem;
+    width: 10rem;
+}
+
+span {
+    font-weight: 700;
+}
+
+/* Estilos de la ubicacion */
+.ubicacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .ubicacion {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 2rem;
+        align-items: center;
+    }
+}
+
+.centrar span {
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+/* Estilos del footer */
+footer {
+    text-align: center;
+}
